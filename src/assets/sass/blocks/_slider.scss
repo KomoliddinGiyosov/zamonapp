@@ -1,0 +1,176 @@
+.slider{
+    &s {
+        position: relative;
+        .splide__progress{
+            position: absolute;
+            bottom: 85px;
+            width: calc(100% - 450px);
+            max-width: 1760px;
+            background-color: #fff;
+            margin: 0px 260px 0px 240px;
+            &__bar {
+                background-color: $orange;
+            }
+        }
+        .slider {
+            position: relative;
+        }
+        .splide__pagination{
+            bottom: 61px;
+            height: 55px;
+            justify-content: flex-start;
+            counter-reset: heading;
+            padding-left: 10px;
+            button {
+                background: unset;
+                width: 15px;
+                opacity: 1;
+                margin-right: 43px;
+                &.is-active {
+                    background: unset;
+                    &::before {
+                        background: unset;
+                        color: $orange;
+                    }
+                }
+                &::before {
+                    font-size: 36px;
+                    font-family: 'gil-e';
+                    color: #fff;
+                    opacity: 1;
+                    counter-increment: heading;
+                    content: counter(heading);
+                }
+            }
+        }
+    
+        &__nav {
+            position: absolute;
+            width: 100%;
+            bottom: 33px;
+            left: 0;
+            .container {
+                @include df();
+            }
+            &--list {
+                color: #fff;
+                font-size: 36px;
+                @include df();
+                margin-left: -21px;
+                margin-right: -21px;
+                li {
+                    margin: 0px 21px;
+                    font-family: 'gil-e';
+                    &.active {
+                        color: $orange;
+                    }
+                }
+            }
+            &--btns {
+                @include df();
+                position: absolute;
+                max-width: 1760px;
+                left: 0;
+                right: 0;
+                bottom: 33px;
+                
+                margin: auto;
+                justify-content: flex-end;
+
+                button {
+                    width: 55px;
+                    opacity: 1;
+                    background-color: #fff;
+                    height: 55px;
+                    right: 0;
+                    z-index: 4;
+                    border-radius: 5px;
+                    border:0;
+                    text-align: center;
+                    margin-left: 19px;
+                    @include df();
+                    justify-content: center;
+                    position: relative;
+                    opacity: 1;
+                    margin-left: 20px;
+                    &:hover{
+                        background-color: $orange;   
+                    }
+                }
+            }
+        }
+    }
+    &__item {
+        height: 882px;
+        @include bg();
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.36) 45.83%, rgba(0, 0, 0, 0.7) 100%);
+        }
+        .container {
+            @include df();
+            justify-content: flex-start;
+            height: 100%;
+            position: relative;
+        }
+        .caption {
+            position: relative;
+            color: #fff;
+            max-width: 50%;
+            z-index: 1;
+            &__logo {
+                font-size: 26px;
+                font-family: 'gil-e';
+                line-height: 70px;
+                span {
+                    color: $orange;
+                }
+            }
+            &__title {
+                font-size: 60px;
+                font-family: 'gil-e';
+                line-height: 70px;
+                margin-bottom: 24px;
+            }
+            &__text {
+                font-size: 16px;
+                line-height: 26px;
+                margin-bottom: 37px;
+            }
+            .btn {
+                width: 193px;
+                display: inline-block;
+                padding: 12px;
+                font-family: 'gil-b';
+                margin-right: 10px;
+                text-align: center;
+                &.more {
+                    background-color: $orange;
+                    &:before {
+                        background-color: $orange;
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.splide__pagination {
+    bottom: -30px;
+    button {
+        width: 34px;
+        height: 4px;
+        border-radius: 5px;
+        margin: 0px 7px;
+        &.is-active {
+            background-color: $orange;
+            transform: scale(1);
+        }
+    }
+}

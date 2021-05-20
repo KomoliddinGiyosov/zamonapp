@@ -1,0 +1,44 @@
+extends ../blocks/temp.pug
+
+block content 
+    nav.navbar 
+        .container 
+            a.home(href="index.html")
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21V11H13V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ul.navbar__menu
+                li.contact: a(href="tel:998710224455",data-text='Для консультации').link +998 71 022 44 55
+                li: a.link(href="about.html") О КОМПАНИИ
+                li.dropdown
+                    a.link(href="about.html") СЕРВИСЫ
+                    ul.dropmenu 
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                li: a.link(href="about.html") ПРОЕКТЫ
+                li: a.link(href="about.html") ПРОИЗВОДСТВО
+                li: a.link(href="about.html") АВТО УСЛУГИ 
+                li: a.link(href="about.html") НОВОСТИ
+                li: a.link(href="vacancy.html") ВАКАНСИИ
+                li: a.link(href="contacts.html").active КОНТАКТЫ
+            include ../blocks/navpart.pug
+    +head('Контакты')
+    .contacts.page
+        .feed 
+            .container 
+                
+                .feed__form
+                    .ltitle СВЯЗАТЬСЯ С НАМИ
+                    .bigtitle Оставьте заявку и получите коммерческое предложение!
+                    form(action="#") 
+                        .feed__row   
+                            .col-6 
+                                input(type="text", placeholder='Имя')
+                            .col-6 
+                                input(type="text", placeholder='Введите свой номер телефона')
+                            .col-12 
+                                textarea(placeholder='Введите текст сообщения')
+                                input(type="submit", value='Отправить сообщение')
+                .feed__img 
+                    img(src="assets/img/manager2.png", alt="")
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.129049881072!2d71.77708741572246!3d40.38383236556298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bb8359385da6f7%3A0x71940101582d1d1c!2zMzEg0YPQu9C40YbQsCDQnNGD0YHRgtCw0LrQuNC70LvQuNC6LCDQpNC10YDQs9Cw0L3QsCwg0KPQt9Cx0LXQutC40YHRgtCw0L0!5e0!3m2!1sru!2s!4v1616312873679!5m2!1sru!2s" width="100%" height="850" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

@@ -1,0 +1,142 @@
+.vacancy {
+    padding-bottom: 100px;
+    margin-bottom: 200px;
+    &__item {
+        margin-bottom: 56px;
+        border:1px solid #000;
+        padding: 29px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        font-family: 'gil-e';
+        margin-bottom: 20px;
+        .img {
+            width: 63px;
+            height: 63px;
+            background-color: $orange;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 22px;
+        }
+    }
+    &__text {
+        line-height: 30px;
+        margin-bottom: 20px;
+    }
+    .more {
+        color: #000;
+        font-family: 'gil-s';
+        padding-left: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            color: $orange;
+            &:before {
+                background-color: #000;
+                left: -10px;
+                width: 25px;
+            }
+        }
+        &:before {
+            transition: 0.3s;
+            content: '';
+            width: 39px;
+            display: inline-block;
+            height: 1px;
+            background-color: $orange;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}
+.send {
+    .title {
+        text-align: center;
+        font-size: 64px;
+        font-family: 'gil-s';
+        margin-bottom: 45px;
+    }
+    form {
+        display: block;
+        width: 100%;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -14px;
+        margin-right: -14px;
+
+    }
+    input[type=submit]{
+        padding: 20px 47px;
+        background-color: #000;
+        font-size: 16px;
+        font-family: 'gil-b';
+        color: #fff;
+        border-radius: 5px;
+        margin-top: 49px;
+        display: inline-block;
+        border:0px;
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+            background-color: $orange;
+        }
+    }
+    textarea {
+        border:1px solid #C4C4C4;
+        font-size: 16px;
+        font-family: 'gil-m';
+        color: #8A8A8A;
+        display: block;
+        width: 100%;
+        padding: 20px;
+        resize: none;
+        height: 270px;   
+    }
+    &__item {
+        @include fb(20%);
+        padding: 14px;
+        label,
+        input,
+        select {
+            border:1px solid #C4C4C4;
+            font-size: 16px;
+            font-family: 'gil-m';
+            color: #8A8A8A;
+            display: block;
+            width: 100%;
+            padding: 20px 20px 20px 49px;
+            background-repeat: no-repeat;
+            background-position: 18px center;
+            &.name {
+                background-image: url(../img/vuser.png);   
+            }
+            &.phone {
+                background-image: url(../img/vphone.png);
+            }
+            &.email {
+                background-image: url(../img/vmail.png);
+            }
+            &.file {
+                padding: 20px;
+                background-image: url(../img/vfile.png);
+                background-position: 97% center;
+            }
+            &[type=file]{
+                display: none;
+            }
+        }
+        select {
+            padding: 20px;
+        }
+    }
+}

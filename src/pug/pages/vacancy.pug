@@ -1,0 +1,70 @@
+extends ../blocks/temp.pug
+
+block content
+    nav.navbar 
+        .container 
+            a.home(href="index.html")
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21V11H13V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ul.navbar__menu
+                li.contact: a(href="tel:998710224455",data-text='Для консультации').link +998 71 022 44 55
+                li: a.link(href="about.html") О КОМПАНИИ
+                li.dropdown
+                    a.link(href="about.html") СЕРВИСЫ
+                    ul.dropmenu 
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                li: a.link(href="about.html") ПРОЕКТЫ
+                li: a.link(href="about.html") ПРОИЗВОДСТВО
+                li: a.link(href="about.html") АВТО УСЛУГИ 
+                li: a.link(href="about.html") НОВОСТИ
+                li: a.link(href="vacancy.html").active ВАКАНСИИ
+                li: a.link(href="contacts.html") КОНТАКТЫ
+            include ../blocks/navpart.pug
+    +head('Вакансии')
+    .vacancy.page 
+        .container 
+            .vacancy__list 
+                .vacancy__item 
+                    .vacancy__top 
+                        .img: img(src="assets/img/iconspec1.svg", alt="")
+                        | ИТ СПЕЦИАЛИСТ
+                    .vacancy__text 
+                        | <b>Требования</b>: Высшее профильное образование, знание узбекского и русского языков. <br> <b>Опыт работы</b>: не менее 3лет опыта в IT с сетевыми технологиями <br> Обязательное наличие знаний и практического опыта работы с решениями Hpe routing, Juniper,Cisco ,switching, data center, на уровне CCNA/CCNP или аналогичный уровень других производителей <br> Знание технологий и опыт работы по защите сетей передачи данных вендоров: Hpe, Juniper, Fiewalls, Ipsec <br> <b>Условия рарботы:</b> Работа на территории работодател, своевременная и достойная заработная плата <br> <b>График:</b> 6 дневная рабочая неделя. Комплексный обед за счет компании
+                    a.more(href="#") Подать заявку
+                .vacancy__item 
+                    .vacancy__top 
+                        .img: img(src="assets/img/iconspec1.svg", alt="")
+                        | ИТ СПЕЦИАЛИСТ
+                    .vacancy__text 
+                        | <b>Требования</b>: Высшее профильное образование, знание узбекского и русского языков. <br> <b>Опыт работы</b>: не менее 3лет опыта в IT с сетевыми технологиями <br> Обязательное наличие знаний и практического опыта работы с решениями Hpe routing, Juniper,Cisco ,switching, data center, на уровне CCNA/CCNP или аналогичный уровень других производителей <br> Знание технологий и опыт работы по защите сетей передачи данных вендоров: Hpe, Juniper, Fiewalls, Ipsec <br> <b>Условия рарботы:</b> Работа на территории работодател, своевременная и достойная заработная плата <br> <b>График:</b> 6 дневная рабочая неделя. Комплексный обед за счет компании
+                    a.more(href="#") Подать заявку
+                .vacancy__item 
+                    .vacancy__top 
+                        .img: img(src="assets/img/iconspec1.svg", alt="")
+                        | ИТ СПЕЦИАЛИСТ
+                    .vacancy__text 
+                        | <b>Требования</b>: Высшее профильное образование, знание узбекского и русского языков. <br> <b>Опыт работы</b>: не менее 3лет опыта в IT с сетевыми технологиями <br> Обязательное наличие знаний и практического опыта работы с решениями Hpe routing, Juniper,Cisco ,switching, data center, на уровне CCNA/CCNP или аналогичный уровень других производителей <br> Знание технологий и опыт работы по защите сетей передачи данных вендоров: Hpe, Juniper, Fiewalls, Ipsec <br> <b>Условия рарботы:</b> Работа на территории работодател, своевременная и достойная заработная плата <br> <b>График:</b> 6 дневная рабочая неделя. Комплексный обед за счет компании
+                    a.more(href="#") Подать заявку
+            .send 
+                .title Отправьте нам ваше резюме
+                form(action="#")
+                    .send__row 
+                        .send__item 
+                            input(type="text", placeholder='Ваше имя').name 
+                        .send__item 
+                            input(type="text", placeholder='Ваш телефон').phone
+                        .send__item 
+                            input(type="text", placeholder='Ваша почта').email
+                        .send__item 
+                            select(name="")
+                                option(value="") Выбрать вакансию   
+                                option(value="") ИТ специалист  
+                                option(value="") Менеджер по продажам   
+                                option(value="") Менеджер по проектам   
+                        .send__item
+                            label(for="vfile").file Выберите файл  
+                            input#vfile(type="file", placeholder='Ваше имя')
+                    textarea(placeholder='Введите текст сообщения')
+                    input(type="submit", value='Отправить резюме')

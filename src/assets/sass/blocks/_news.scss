@@ -1,0 +1,131 @@
+.news {
+    background: url(../img/sketch2.png) no-repeat center center/cover;
+    padding-top: 98px;
+    padding-bottom: 240px;
+    &__item {
+        &:hover{
+            .news {
+                &__text {
+                    background-color: $black;
+                    color: #fff;
+                    .date {
+                        color: #fff;
+                    }
+                    .title {
+                        color: $orange;
+                    }
+                }
+            }
+            .more {
+                color: $orange;
+                &:before {
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &__slider {
+        margin-left: -25px;
+        margin-right: -25px;
+        position: relative;
+
+    }
+    &__box {
+        padding:25px;
+    }
+    .bigtitle {
+        
+    }
+    &__top {
+        position: relative;
+        margin-bottom: 20px;
+    }
+    &__btns {
+        position: absolute;
+        right: 25px;
+        top: -66px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        button {
+            width: 55px;
+            height: 55px;
+            border-radius: 5px;
+            opacity: 1;
+            right: 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $black;
+            border:0;
+            margin-left: 30px;
+            path {
+                fill:#fff;
+            }
+            &:hover {
+                background-color: $orange;
+            }
+        }
+    }
+    &__img {
+        height: 420px;
+        @include bg();
+    }
+    &__text {
+        margin-top: -86px;
+        background-color: #fff;
+        padding: 28px;
+        padding-top: 48px;
+        margin-left: 23px;
+        margin-right: 23px;
+        box-shadow: 0px 4px 12px  rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+    }
+    .date {
+        color: #4A4A4A;
+        margin-bottom: 28px;
+        transition: 0.3s;
+    }
+    .title {
+        font-size: 22px;
+        display: inline-block;
+        font-family: 'gil-b';
+        margin-bottom: 22px;
+        color: #000;
+        transition: 0.3s;
+    }
+    .text {
+        font-size: 14px;
+        line-height: 24px;
+        margin-bottom: 29px;
+    }
+    .more {
+        color: #000;
+        font-family: 'gil-s';
+        padding-left: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        &:hover {
+            &:before {
+                left: -10px;
+            }
+        }
+        &:before {
+            transition: 0.3s;
+            content: '';
+            width: 39px;
+            display: inline-block;
+            height: 1px;
+            background-color: $orange;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            z-index: -1;
+        }
+    }
+}

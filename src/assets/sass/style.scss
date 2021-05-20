@@ -1,0 +1,286 @@
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;   
+}
+$orange: #FF8900;
+$grey: #C4C4C4;
+$black: #141414;
+
+@mixin df() {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin fb($w:0) {
+  flex-basis: $w;
+  max-width: $w;
+  width: $w;
+}
+
+@mixin centre($w, $h) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  display: block;
+  width: $w;
+  height: $h;
+}
+
+@mixin bg() {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@font-face {
+  font-family: 'gil-r';
+  src: url(../fonts/Gilroy-Regular.otf);
+}
+
+@font-face {
+  font-family: 'gil-b';
+  src: url(../fonts/Gilroy-Bold.otf);
+}
+
+@font-face {
+  font-family: 'gil-m';
+  src: url(../fonts/Gilroy-Medium.otf);
+}
+
+@font-face {
+  font-family: 'gil-s';
+  src: url(../fonts/Gilroy-Semibold.otf);
+}
+
+@font-face {
+  font-family: 'gil-e';
+  src: url(../fonts/Gilroy-Extrabold.otf);
+}
+
+body {
+  font-family: 'gil-r';
+  color: #000;
+  &.noscroll {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1760px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  transition: 0.3s;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}
+input:focus {
+  outline: 0;
+}
+.btn {
+  min-width: 193px;
+  background-color: #000;
+  position: relative;
+  border-radius: 5px;
+  @include df();
+  justify-content: center;
+  height: 46px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'gil-b';
+  border: 0;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background-color: $orange;
+    &::before {
+      background-color: darken($orange,10%);
+      bottom: -6px;
+    }
+  }
+  &:before {
+    content: '';
+    background-color: $black;
+    width: 94%;
+    transition: 0.3s;
+    height: 94%;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 5px;
+    z-index: -1;
+  }
+  &.orange {
+    background-color: $orange;
+    &:before {
+      background: rgba(255, 137, 0, 0.4);
+      box-shadow: 0px 4px 20px rgba(255, 137, 0, 0.4);
+    }
+  }
+}
+
+.filter {
+
+  &__nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 37px;
+
+    .nav {
+      height: 47px;
+      border-radius: 5px;
+      padding: 14px 20px;
+      border: 0;
+      margin: 0px 18px;
+      font-size: 16px;
+      font-family: 'gil-m';
+
+      &:hover,
+      &.active {
+        background-color: $orange;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.btitle {
+  color: #717171;
+  font-size: 16px;
+  padding: 12px 15px;
+  font-family: 'gil-b';
+  margin-bottom: 45px;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: '';
+      border: 5px solid rgba(255, 137, 0, 0.26);
+      width: 43px;
+      height: 43px;
+      display: inline-block;
+      position: absolute;
+      top: -11px;
+      left: -15px;
+      box-sizing: border-box
+    }
+  }
+
+}
+
+.bigtitle {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'gil-e';
+  max-width: 992px;
+  margin: auto;
+  margin-bottom: 32px;
+
+  span {
+    color: $orange;
+  }
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  .link {
+    width: 55px;
+    height: 55px;
+    @include df();
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #E9E9E9;
+    font-size: 20px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    font-family: 'gil-b';
+    margin: 0px 11px;
+    &:hover,
+    &.active {
+      background-color: $orange;
+      color: #fff;
+    }
+    &.next,
+    &.prev {
+      background-color: $black;
+      color: #fff;
+    }
+  }
+}
+
+.page {
+  padding-top: 60px;
+}
+p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  line-height: 34px;
+}
+h3 {
+  font-size: 36px;
+  font-family: 'gil-b';
+
+  line-height: 70px;
+
+}
+
+@import 'splide.scss';
+
+@import 'blocks/grid';
+@import 'blocks/header';
+
+@import 'blocks/slider';
+@import 'blocks/about';
+@import 'blocks/service';
+@import 'blocks/gallery';
+@import 'blocks/stages';
+@import 'blocks/news';
+
+@import 'blocks/search';
+
+@import 'blocks/vacancy';
+
+@import 'blocks/404';
+
+
+
+@import 'blocks/feed';
+@import 'blocks/footer';
+
+@import 'blocks/media';

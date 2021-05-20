@@ -1,0 +1,75 @@
+extends ../blocks/temp.pug
+
+block content
+    nav.navbar 
+        .container 
+            a.home(href="index.html")
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21V11H13V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ul.navbar__menu
+                li.contact: a(href="tel:998710224455",data-text='Для консультации').link +998 71 022 44 55
+                li: a.link(href="about.html") О КОМПАНИИ
+                li.dropdown
+                    a.link(href="about.html") СЕРВИСЫ
+                    ul.dropmenu 
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                li: a.link(href="about.html") ПРОЕКТЫ
+                li: a.link(href="about.html") ПРОИЗВОДСТВО
+                li: a.link(href="about.html").active АВТО УСЛУГИ 
+                li: a.link(href="about.html") НОВОСТИ
+                li: a.link(href="vacancy.html") ВАКАНСИИ
+                li: a.link(href="contacts.html") КОНТАКТЫ
+            include ../blocks/navpart.pug
+    +head('Сервисы')
+    .services.page 
+        .container 
+            .row 
+                .col-4.col-md-12 
+                    ul.services__list 
+                        li: a(href="#").link.active Все услуги 
+                        li: a(href="#").link Ремонт в новостройках
+                        li: a(href="#").link Частичный ремонт
+                        li: a(href="#").link Косметологический ремонт
+                        li: a(href="#").link Капитальный ремонт
+                        li: a(href="#").link Ремонт класса “Люкс”
+                    a.down(href="#") 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 8L10 13L15 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 13V1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        | Загрузите брошюру нашей компании
+                    a.down(href="#") 
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19 13V17C19 17.5304 18.7893 18.0391 18.4142 18.4142C18.0391 18.7893 17.5304 19 17 19H3C2.46957 19 1.96086 18.7893 1.58579 18.4142C1.21071 18.0391 1 17.5304 1 17V13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 8L10 13L15 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 13V1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        | Загрузите брошюру нашей компании
+                .col-8.col-md-12 
+                    img.full.mb(src="assets/img/pict2.jpg", alt="")
+                    p У нас долгая и гордая история, в которой особое внимание уделяется экологическим, социальным и экономическим результатам, чтобы создать места, которые также реагируют на сложные глобальные силы, формирующие наше будущее, включая быструю урбанизацию, климат и изменения, неравенство и ресурсную нагрузку.
+                    .row 
+                        .col-6
+                            h3 Управление проектом
+                            p Мы гордимся своей долгой историей, уделяя особое внимание социальным и экономическим результатам в области окружающей среды, чтобы предоставить место, которое отвечает нашим требованиям.
+                        .col-6
+                            h3 Решения
+                            p Мы гордимся своей долгой историей, уделяя особое внимание социальным и экономическим результатам в области окружающей среды, чтобы предоставить место, которое отвечает нашим требованиям.
+                    h3 Выгоды
+                    p У нас долгая и гордая история, в которой особое внимание уделяется окружающей среде, социальным и экономическим результатам, быстрой урбанизации, климату и изменениям, неравенству и ресурсному стрессу.
+                    .services__gal  
+                        h3 Галерея
+                        .row 
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                            .col-4.col-md-6.col-xs-6
+                                img.full(src="assets/img/gal2.jpg", alt="")
+                    .services__video 
+                        h3 Ролики
+                        .video 
+                            a.video__play(href="https://www.youtube.com/watch?v=Psz3E5y_2Ik",target='_blank')
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.916016 2.29765C0.916016 0.719465 2.65832 -0.236966 3.98977 0.610321L14.6364 7.38544C15.8714 8.17135 15.8714 9.97418 14.6364 10.7601L3.98976 17.5352C2.65831 18.3825 0.916016 17.4261 0.916016 15.8479V2.29765Z" fill="white"/></svg>
+                            img(src="assets/img/video2.jpg", alt="")

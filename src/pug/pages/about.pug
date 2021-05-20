@@ -1,0 +1,183 @@
+extends ../blocks/temp.pug
+
+block content 
+    nav.navbar 
+        .container 
+            a.home(href="index.html")
+                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 8L10 1L19 8V19C19 19.5304 18.7893 20.0391 18.4142 20.4142C18.0391 20.7893 17.5304 21 17 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V8Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 21V11H13V21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            ul.navbar__menu
+                li.contact: a(href="tel:998710224455",data-text='Для консультации').link +998 71 022 44 55
+                li: a.link(href="about.html").active О КОМПАНИИ
+                li.dropdown
+                    a.link(href="about.html") СЕРВИСЫ
+                    ul.dropmenu 
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                        li: a(href="#") Xizmat nomi
+                li: a.link(href="about.html") ПРОЕКТЫ
+                li: a.link(href="about.html") ПРОИЗВОДСТВО
+                li: a.link(href="about.html") АВТО УСЛУГИ 
+                li: a.link(href="about.html") НОВОСТИ
+                li: a.link(href="vacancy.html") ВАКАНСИИ
+                li: a.link(href="contacts.html") КОНТАКТЫ
+            include ../blocks/navpart.pug
+    +head('О компании')
+    .us.page 
+        .us__top 
+            .container 
+                .btitle: span О КОМПАНИИ
+                .bigtitle Мы лидеры Архитектуры!
+                .row 
+                    .col-5.col-md-12
+                        .us__leader
+                            .title Стремление к <br> высочайшему качеству и результатам.
+                            p По каждому проекту мы устанавливаем отношения с партнерами, которые, как мы знаем, помогут нам создать дополнительную ценность для вашего проекта. Мы не только объединяем государственный и частный секторы, но и устанавливаем межотраслевые связи, чтобы собирать знания и учиться друг у друга, которые, как мы знаем, помогут нам создать добавленную стоимость для вашего проекта .......
+                            button.btn Оставить заявку
+                    .col-7.col-md-12
+                        .video 
+                            a.video__play(href="#")
+                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.916016 2.29765C0.916016 0.719465 2.65832 -0.236966 3.98977 0.610321L14.6364 7.38544C15.8714 8.17135 15.8714 9.97418 14.6364 10.7601L3.98976 17.5352C2.65831 18.3825 0.916016 17.4261 0.916016 15.8479V2.29765Z" fill="white"/></svg>
+                            img(src="assets/img/pict1.jpg", alt="")
+        .container 
+            .team 
+                .btitle: span НАША КОМАНДА
+                .bigtitle Наша команда состоит из сильнейших профессионалов своего дела
+                .team__slide.splide 
+                    .splide__track 
+                        .splide__list  
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+                            .splide__slide.team__box 
+                                +worker
+                                +worker
+        .history 
+            .container 
+                .btitle: span История нашей компании
+                .bigtitle Познакомьтесь со зданиями, которые мы построили за время нашей деятельности
+                .history__slide.splide 
+                    .splide__track
+                        .splide__list 
+                            .history__box.splide__slide
+                                .history__item
+                                    .history__img(style='background-image:url(assets/img/done1.jpg)')
+                                    .history__text 
+                                        .top 
+                                            .top__title 
+                                                img(src="assets/img/about_year.svg", alt="")
+                                                .text 
+                                                    .b “Akay City”
+                                                    | жилой комплекс
+                                            .top__year 2012 год
+                                        p Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, conctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+                                        a.btn(href="#") Подробнее
+                            .history__box.splide__slide
+                                .history__item
+                                    .history__img(style='background-image:url(assets/img/done1.jpg)')
+                                    .history__text 
+                                        .top 
+                                            .top__title 
+                                                img(src="assets/img/about_year.svg", alt="")
+                                                .text 
+                                                    .b “Akay City”
+                                                    | жилой комплекс
+                                            .top__year 2012 год
+                                        p Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, conctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+                                        a.btn(href="#") Подробнее
+                            .history__box.splide__slide
+                                .history__item
+                                    .history__img(style='background-image:url(assets/img/done1.jpg)')
+                                    .history__text 
+                                        .top 
+                                            .top__title 
+                                                img(src="assets/img/about_year.svg", alt="")
+                                                .text 
+                                                    .b “Akay City”
+                                                    | жилой комплекс
+                                            .top__year 2012 год
+                                        p Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, conctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+                                        a.btn(href="#") Подробнее
+                            .history__box.splide__slide
+                                .history__item
+                                    .history__img(style='background-image:url(assets/img/done1.jpg)')
+                                    .history__text 
+                                        .top 
+                                            .top__title 
+                                                img(src="assets/img/about_year.svg", alt="")
+                                                .text 
+                                                    .b “Akay City”
+                                                    | жилой комплекс
+                                            .top__year 2012 год
+                                        p Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, conctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse.
+                                        a.btn(href="#") Подробнее
+
+        .us__gal 
+            .container
+                .btitle: span Галерея
+                .bigtitle Ознакомиться с нашей деятельностью вы можете через картинки ниже
+                .row
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+                    .col-4.col-md-4.col-xs-6 
+                        img.full(src="assets/img/gal1.jpg", alt="")
+    .feed.nobg
+        .container 
+            .feed__img 
+                img(src="assets/img/manager.png", alt="")
+            .feed__form
+                .ltitle СВЯЗАТЬСЯ С НАМИ
+                .bigtitle Оставьте заявку и получите коммерческое предложение!
+                form(action="#") 
+                    .feed__row   
+                        .col-6 
+                            input(type="text", placeholder='Имя')
+                        .col-6 
+                            input(type="text", placeholder='Введите свой номер телефона')
+                        .col-12 
+                            textarea(placeholder='Введите текст сообщения')
+                            input(type="submit", value='Отправить сообщение')
+    .partners 
+        .container 
+            .btitle.orange: span ПАРТНЕРЫ
+            .bigtitle Наши партнеры, которые работают с нами
+            .partners__slide.splide 
+                .splide__track 
+                    .splide__list 
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+                        .splide__slide.partners__box 
+                            img(src="assets/img/partner1.png", alt="")
+
+
+

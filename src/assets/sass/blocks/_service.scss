@@ -1,0 +1,179 @@
+.service {
+    &s {
+        margin-bottom: 100px;
+        padding-bottom: 100px;
+
+        &__gal {
+            .full {
+                margin-bottom: 30px;
+            }
+        }
+
+        img.full {
+            width: 100%;
+
+            &.mb {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__list {
+            display: block;
+            width: 100%;
+            background-color: #F7F7F7;
+            margin-bottom: 32px;
+
+            li {
+                display: block;
+
+                .link {
+                    display: block;
+                    padding: 28px 36px;
+                    color: $black;
+                    font-family: 'gil-b';
+
+                    &.active,
+                    &:hover {
+                        background-color: $orange;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .down {
+            display: flex;
+            align-items: center;
+            color: #fff;
+            font-size: 18px;
+            font-family: 'gil-b';
+            padding-left: 32px;
+            background: $black;
+            height: 82px;
+            margin-bottom: 17px;
+
+            svg {
+                margin-right: 27px;
+            }
+
+        }
+    }
+
+    .btitle {
+        text-align: center;
+        color: $orange;
+        margin-bottom: 0;
+
+        span:before {
+            border-color: #E5E5E5;
+            z-index: -1;
+        }
+    }
+
+
+
+    &__item {
+        border: 1px solid #000;
+        padding: 40px;
+        margin-bottom: 72px;
+        position: relative;
+        overflow: hidden;
+
+        &:hover {
+            background-color: $black;
+            color: #fff;
+            transition: 0.3s;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                // background-color: #fff;
+                opacity: 0.07;
+                left: 0;
+                top: 0;
+                border-top: 100% solid transparent;
+                border-left: 100% solid #fff;
+            }
+
+            .service__item {
+
+                &--top {
+                    .img {
+                        background-color: #fff;
+
+                        svg,
+                        path {
+                            fill: $orange;
+                        }
+                    }
+                }
+
+                &--more {
+                    color: $orange;
+
+                    &:before {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+
+        &--top {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-family: 'gil-e';
+            margin-bottom: 36px;
+
+            .img {
+                margin-right: 21px;
+                width: 100px;
+                height: 100px;
+                background-color: $orange;
+                @include df();
+                justify-content: center;
+                transition: 0.3s;
+
+                svg,
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
+        &--text {
+            font-size: 16px;
+            line-height: 30px;
+            min-height: 150px;
+        }
+
+        &--more {
+            color: #000;
+            font-family: 'gil-s';
+            padding-left: 15px;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            &:hover:before {
+                left: -10px;
+            }
+            &:before {
+                content: '';
+                width: 39px;
+                display: inline-block;
+                height: 1px;
+                background-color: $orange;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                left: 0;
+                z-index: -1;
+                transition: 0.3s;
+            }
+        }
+    }
+}

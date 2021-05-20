@@ -1,0 +1,247 @@
+.footer {
+    padding-bottom: 29px;
+    background: url(../img/footerbg.jpg) no-repeat center center/cover;
+    position: relative;
+    z-index: 1;
+    
+    .bottom {
+        color: #fff;
+        font-size: 16px;
+        font-family: 'gil-b';
+        margin-top: 37px;
+        a {
+            color: #fff;
+            &:hover {
+                color: $orange;
+            }
+        }
+        .container {
+            justify-content: space-between;
+        }
+    }
+    .container {
+        display: flex;
+        
+    }
+    &__logo {
+        @include fb(552px);
+        margin-right: 90px;
+        padding: 57px 47px 70px;
+        background-color: $black;
+        text-align: center;
+        box-sizing: border-box;
+        border-top: 10px solid $orange;
+        color: #fff;
+        margin-top: -150px;
+        .text {
+            margin-top: 42px;
+            line-height: 38px;
+            margin-bottom: 42px;
+        }
+        .social {
+            .link {
+                margin: 0px 20px;
+                &:hover {
+                    path{
+                        fill:$orange;
+                    }
+                }
+            }
+        }
+    }
+    &__row {
+        display: flex;
+        align-items: flex-start;
+    }
+    &__item {
+        margin-top: 134px;
+        margin-right: 50px;
+        .contact {
+            color: #fff;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 45px;
+            &__img {
+                margin-right: 18px;
+            }
+            .ctitle {
+                font-size: 16px;
+                font-family: 'gil-b';
+                margin-bottom: 3px;
+            }
+            &__link {
+                color: #fff;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+        .title {
+            font-size: 24px;
+            font-family: 'gil-b';
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 20px;
+            color: #fff;
+            &:after {
+                content: '';
+                height: 2px;
+                width: 59px;
+                background-color: $orange;
+                display: block;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+        }
+        
+        .menu {
+            margin-right: 120px;
+            .link {
+                color: #fff;
+                font-family: 'gil-m';
+                display: inline-block;
+                margin-bottom: 35px;
+                &:hover {
+                    color: $orange;
+                }
+                &:before {
+                    content: '-';
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+.toptop {
+    min-width: 46px;
+    min-height: 75px;
+    background-color: unset;
+    color: #fff;
+    font-size: 15px;
+    background-image: url(../img/btntop.png);
+    background-size: contain;
+    position: fixed;
+    right: 40px;
+    bottom: 60px;
+    border: 0;
+    z-index: 7;
+    display: none;
+}
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(20, 20, 20, 0.88);
+    display: none;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+
+    &__success {
+        width: 678px;
+        padding: 41px 87px;
+        text-align: center;
+        font-size: 20px;
+        font-family: 'gil-b';
+        background-color: #fff;
+        img {
+            display: block;
+            margin: auto;
+            margin-bottom: 34px;
+        }
+        .text {
+            line-height: 39px;
+            margin-bottom: 43px;
+        }
+        .close {
+            width: 239px;
+            text-align: center;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            margin: auto;
+            padding: 20px;
+            border: 0;
+            font-size: 16px;
+        }
+    }
+    &__close {
+        position: fixed;
+        right: 100px;
+        top: 100px;
+        background: unset;
+        border: 0;
+        z-index: 4;
+        path {
+            // fill:#fff;
+        }
+    }
+    
+    &.active {
+        display: flex;
+        .modal__box {
+            top: 129px;
+        }
+    }
+    &__box {
+        transition: 0.5s;
+        top: -2000px;
+        position: absolute;
+        width: 625px;
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 41px 75px 29px;
+        text-align: center;
+        .title {
+            font-size: 50px;
+            font-family: 'gil-e';
+            margin-bottom: 20px;
+        }
+        form {
+            display: block;
+            width: 100%;
+            input,
+            select,
+            textarea {
+                display: block;
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 33px;
+                border: 1px solid #E5E5E5;
+                font-size: 16px;
+                font-family: 'gil-r';
+                &:focus {
+                    outline: 0;
+                    border-color: $orange;
+                }
+                &.user {
+                    background-image: url(../img/vuser.png);
+                    background-repeat: no-repeat;
+                    background-position: 25px center;
+                    padding-left: 59px;
+                }
+                &.phone {
+                    background-image: url(../img/vphone.png);
+                    background-repeat: no-repeat;
+                    background-position: 25px center;
+                    padding-left: 59px;
+                }
+                &[type=submit]{
+                    width: 239px;
+                    text-align: center;
+                    background-color: #000;
+                    color: #fff;
+                    border-radius: 5px;
+                    margin: auto;
+                }
+            }
+            textarea {
+                height: 163px;
+            }
+        }
+    }
+}

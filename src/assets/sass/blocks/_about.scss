@@ -1,0 +1,333 @@
+.about {
+    padding-top: 124px;
+    padding-bottom: 90px;
+    position: relative;
+    overflow: hidden;
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .container {
+        background: #FFFFFF;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.13);
+        padding: 58px 93px;
+        display: flex;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content:'';
+            border-bottom: 124px solid black;
+            border-left: 124px solid transparent;
+            position: absolute;
+            left: 0;
+            top: -248px;
+            height: 124px;
+            width: 100vw;
+        }
+    }
+    &__left {
+        height: 735px;
+        @include fb(440px);
+        margin-right: 215px;
+        padding: 52px;
+        background: linear-gradient(90deg, #444444 0%, #000000 100%);
+        position: relative;
+        img {
+            height: 100%;
+        }
+    }
+    &__play {
+        position: absolute;
+        width: 61px;
+        height: 61px;
+        border-radius: 5px;
+        background-color: $orange;
+        @include df();
+        justify-content: center;
+        bottom: 21.42px;
+        right: -31px;
+        transition: 0.3s;
+        position: 3px;
+        &:hover {
+            &::before{
+                animation-name: unset;
+                z-index: -1;
+            }
+        }
+        &:before{
+            content: '';
+            z-index: 1;
+            animation-name: waveff;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            position: absolute;
+            width: 100%;
+            height: 100%; 
+            background-color: $orange;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        &:hover {
+            background-color: black;
+            path {
+                fill:$orange;
+            }
+        }
+    }
+    &__title {
+        font-size: 50px;
+        font-family: 'gil-e';
+        margin-bottom: 13px;
+        line-height: 70px;
+        
+    }
+    .exp {
+        font-size: 20px;
+        font-family: 'gil-b';
+        padding-bottom: 20px;
+        margin-bottom: 28px;
+        color:$orange;
+        border-bottom: 2px solid #000;
+        max-width: 270px;
+    }
+    p {
+        line-height: 36px;
+        font-family: 'gil-m';
+        margin-bottom: 28px;
+    }
+    .btn {
+        width: 193px;
+        margin-bottom: 90px;
+        &:before {
+            box-shadow: 0px 4px 20px rgba(38, 38, 38, 0.4);
+        }
+    }
+    .row {
+        justify-content: space-between;
+    }
+    &__item {
+        @include df();
+        font-size: 14px;
+        font-family: 'gil-m';
+        color:#413D43;
+        svg {
+            margin-right: 15px;
+        }
+        .title {
+            font-size: 20px;
+            font-family: 'gil-b';
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes waveff{
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+}
+
+.us {
+
+    &__gal {
+        margin-top: 81px;
+    }
+    img.full {
+        margin-bottom: 49px;
+    }
+    .btitle {
+        text-align: center;
+        color: $orange;
+        position: relative;
+        z-index: 1;
+        span:before {
+            border-color: #C4C4C4;
+            z-index: -1;
+        }
+    }
+    .team {
+        margin-top: 100px;
+        .bigtitle {
+            max-width: 940px;
+            margin: auto;
+            margin-bottom: 63px;
+        }
+    }
+    &__top {
+        position: relative;
+        &:before {
+            content: '';
+            height: 414px;
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-image: url(../img/sketch3.png);
+            background-size: cover;
+
+        }
+        
+        
+
+    }
+    &__leader {
+        background-color: $orange;
+        padding: 50px;
+        
+        position: relative;
+        .title {
+            color: #fff;
+            font-size: 36px;
+            line-height: 50px;
+            margin-bottom: 24px;
+            font-family: 'gil-b';
+        }
+        .btn {
+            margin-top: 25px;
+        }
+    }
+}
+.team {
+    .bigtitle {
+        margin-bottom: 63px;
+    }
+    &__box {
+        padding: 22px;
+    }
+    &__slide {
+        margin-left: -22px;
+        margin-right: -22px;
+    }
+    .splide__pagination{
+        bottom: 30px;
+    }
+    &__item {
+        height: 474px;
+        @include bg();
+        margin-bottom: 66px;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .team__caption {
+                bottom: 0;
+            }
+        }
+    }
+    &__caption {
+        position: absolute;
+        background-color: rgba(0,0,0,0.67);
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 20px 0px;
+        text-align: center;
+        bottom: -300px;
+        transition: 0.3s;
+        .who {
+            font-size: 20px;
+            font-family: 'gil-b';
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .lvl {
+            font-size: 14px;
+            font-family: 'gil-m';
+            color: $orange;
+        }
+    }
+}
+.history {
+    background-image: url(../img/historybg.jpg);
+    background-size: cover;
+    padding: 60px 0px;
+    &__slide {
+        margin-left: -21px;
+        margin-right: -21px;
+    }
+    &__box {
+        padding: 21px;
+    }
+    .btitle {
+        text-transform: uppercase;
+    }
+    .bigtitle {
+        color: #fff;
+        max-width: 1300px;
+    }
+    &__item {
+        background: #fff;
+        display: flex;
+    }
+    &__img {
+        @include fb(215px);
+        @include bg();
+        min-width: 215px;
+    }
+    &__text {
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        p {
+            font-size: 14px;
+            font-family: 'gil-m';
+            line-height: 23px;
+            margin-bottom: 37px;
+        }
+        .btn {
+            width: 193px;
+        }
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 18px;
+            &__year {
+                font-size: 20px;
+                font-family: 'gil-b';
+            }
+            &__title {
+                display: flex;
+                align-items: center;
+                color: #413D43;
+                font-size: 14px;
+                .b {
+                    font-size: 20px;
+                    font-family: 'gil-b';
+                    margin-bottom: 2px;
+                    color: #000;
+                }
+                svg{
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+.partners {
+    margin-top: 134px;
+    background-image: url(../img/sketch4.png);
+    background-size: cover;
+    padding-bottom: 250px;
+    .btitle {
+        text-align: center;
+        color: $orange;
+        span:before {
+            border-color:#E5E5E5;
+            z-index: -1;
+        }
+    }
+    .bigtitle {
+        margin-bottom: 90px;
+    }
+    &__box {
+        text-align: center;
+        position: relative;
+        z-index: 1;
+    }
+}

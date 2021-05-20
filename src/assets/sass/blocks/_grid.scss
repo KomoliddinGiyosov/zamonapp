@@ -1,0 +1,27 @@
+$i:1;
+
+@while $i<=12 {
+  .col-#{$i}{
+    flex-basis: percentage($i/12);
+    max-width: percentage($i/12);
+    width: percentage($i/12);
+    padding: 0px 25px;
+  }
+  @media (max-width:768px) {
+    .col-md-#{$i}{
+      flex-basis: percentage($i/12);
+      max-width: percentage($i/12);
+      width: percentage($i/12);
+      padding: 0px 25px;
+    }
+  }
+  @media (max-width:600px) {
+    .col-xs-#{$i}{
+      flex-basis: percentage($i/12);
+      max-width: percentage($i/12);
+      width: percentage($i/12);
+      padding: 0px 25px;
+    }
+  }
+  $i:$i+1;
+}
